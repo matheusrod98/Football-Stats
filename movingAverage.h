@@ -5,10 +5,11 @@
 class MovingAverage {
 
     public:
-        MovingAverage(unsigned int seasons, std::vector<unsigned int> goalsPerSeason);
+        MovingAverage(float seasons, std::vector<float> goalsPerSeason);
+        std::vector<float> getMovingAverage();
 
     private:
-        std::vector<unsigned int> averagesPerSeason;
+        std::vector<float> averagesPerSeason;
 };
 
 #endif /* _MOVING_AVERAGE_ */
