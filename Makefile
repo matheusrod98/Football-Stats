@@ -1,15 +1,15 @@
-//TODO: research in how to improve the makefile, using .phony, for example
-CC = clang++
+#TODO: research in how to improve the makefile, using .phony, for example
+CPP = clang++
 
 ifeq ($(cc), gcc)
-CC = g++
+CPP = g++
 endif
 
 ifeq ($(cc), clang)
-CC = clang++
+CPP = clang++
 endif
 
-CCFLAGS = -Wall -std=c++11
+CPPFLAGS = -Wall -std=c++11
 
 OBJECTS = movingAverage.o main.o test.o
 
@@ -18,10 +18,10 @@ EXEC = football_stats
 all: $(EXEC)
 
 $(EXEC): $(OBJECTS)
-	$(CC) $(CCFLAGS) $(OBJECTS) -o $(EXEC) 
+	$(CPP) $(CPPFLAGS) $(OBJECTS) -o $(EXEC) 
 
 .cpp.o:
-	$(CC) $(CCFLAGS) -c $<
+	$(CPP) $(MODE) $(CPPFLAGS) -c $<
 
 clean:
 	rm -f *.o
