@@ -3,7 +3,7 @@
 
 MovingAverage::MovingAverage(unsigned int seasons, std::vector<unsigned int> goalsPerSeason) {
     // TODO Rename this movingAverageIndex variable, give it a better name
-    for (const unsigned int& movingAverageIndex : goalsPerSeason) {
+    for (unsigned int window = 0; window < goalsPerSeason.size(); window++) {
 
         unsigned int seasonAverage = 0;
         for (unsigned int season = 0; season <= movingAverageIndex; season++)
