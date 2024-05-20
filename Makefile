@@ -11,7 +11,7 @@ endif
 
 CCFLAGS = -Wall -std=c++11
 
-OBJECTS = movingAverage.o
+OBJECTS = movingAverage.o main.o test.o
 
 EXEC = football_stats
 
