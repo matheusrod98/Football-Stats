@@ -1,6 +1,4 @@
 #include "movingAverage.h"
-#include <iostream>
-#include <ostream>
 #include <vector>
 
 MovingAverage::MovingAverage(float seasons, std::vector<float> goalsPerSeason) {
