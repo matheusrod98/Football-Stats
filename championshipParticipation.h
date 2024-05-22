@@ -3,13 +3,13 @@
 
 #include <string>
 
-class Championship {
+class ChampionshipParticipation {
 
     public:
-        Championship(std::string name, unsigned int season, unsigned int goalsScored, unsigned int goalsTaken);
+        ChampionshipParticipation(std::string name, unsigned int season, unsigned int goalsScored, unsigned int goalsTaken);
 
-        std::string getChampionshipName();
-        void setChampionshipName(std::string championshipName);
+        std::string getChampionshipParticipationName();
+        void setChampionshipParticipationName(std::string championshipParticipationName);
 
         unsigned int getSeason();
         void setSeason(unsigned int seasonYear);
