@@ -11,7 +11,7 @@ endif
 
 CPPFLAGS = -Wall -std=c++11
 
-OBJECTS = movingAverage.o main.o test.o championshipParticipation.o
+OBJECTS = championship.o main.o movingAverage.o team.o test.o
 
 EXEC = football_stats
 

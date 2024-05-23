@@ -1,11 +1,9 @@
-#include "team.h"
-#include "championshipParticipation.h"
 #include <string>
-#include <vector>
 
-Team::Team(std::string _name, std::vector<ChampionshipParticipation> _championshipParticipations) {
+#include "team.h"
+
+Team::Team(std::string _name, unsigned int goalsTaken, unsigned int goalsScored) {
     name = _name;
-    championshipParticipations = _championshipParticipations;
 }
 
 std::string Team::getName() {
@@ -16,10 +14,18 @@ void Team::setName(std::string _name) {
     name = _name;
 }
 
-std::vector<ChampionshipParticipation> Team::getChampionshipParticipations() {
-    return championshipParticipations;
+unsigned int Team::getGoalsScored() {
+    return goalsScored;
 }
 
-void Team::setChampionshipParticipations(std::vector<ChampionshipParticipation> _championshipParticipations) {
-    championshipParticipations = _championshipParticipations;
+void Team::setGoalsScored(unsigned int _goalsScored) {
+    goalsScored = _goalsScored;
+}
+
+unsigned int Team::getGoalsTaken() {
+    return goalsTaken;
+}
+
+void Team::setGoalsTaken(unsigned int _goalsTaken) {
+    goalsTaken = _goalsTaken;
 }

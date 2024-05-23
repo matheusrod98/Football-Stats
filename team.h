@@ -1,24 +1,27 @@
 #ifndef _TEAM_
 #define _TEAM_
 
-#include "championshipParticipation.h"
 #include <string>
 #include <vector>
 
 class Team {
 
     public:
-        Team(std::string name, std::vector<ChampionshipParticipation> championshipParticipations);
+        Team(std::string name, unsigned int goalsTaken, unsigned int goalsScored);
 
         std::string getName();
         void setName(std::string name);
 
-        std::vector<ChampionshipParticipation> getChampionshipParticipations();
-        void setChampionshipParticipations(std::vector<ChampionshipParticipation> championshipParticipations);
+        unsigned int getGoalsScored();
+        void setGoalsScored(unsigned int goalsScored);
+
+        unsigned int getGoalsTaken();
+        void setGoalsTaken(unsigned int goalsTaken);
 
     private:
         std::string name;
-        std::vector<ChampionshipParticipation> championshipParticipations;
+        unsigned int goalsScored;
+        unsigned int goalsTaken;
 };
 
 #endif /* _TEAM_ */
